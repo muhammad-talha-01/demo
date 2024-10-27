@@ -1,0 +1,535 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/9c5457b8-9ab0-4a04-9fc1-e608d5670f1a/710d74e0-7158-408e-8d9b-23c219dee5df/IN-en-20210719-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Black overlay with 50% opacity */
+    z-index: 1;
+  }
+
+  .logo-navbar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 812px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 0 10px;
+    z-index: 2;
+  }
+
+  .logo img {
+    height: 57px;
+    width: auto;
+  }
+
+  .navbar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .navbar button {
+    padding: 8px 12px;
+    margin: 4px;
+    background-color: red;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 250ms, padding 250ms;
+  }
+
+  .navbar button:hover {
+    background-color: darkred;
+    padding: 9px 13px;
+  }
+
+  .main-content {
+    position: relative;
+    z-index: 10;
+    color: white;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    max-width: 800px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-top: 170px;
+  }
+
+  .main-content h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .main-content .p1 {
+    margin-top: 20px;
+    font-size: 27px;
+  }
+
+  .main-content .p2 {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+
+  .searchbar-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px auto;
+    gap: 10px;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 110px;
+  }
+
+  .searchbar-1 input {
+    padding: 12px 30px;
+    border-radius: 5px;
+    border: 1px solid #09ff00;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .searchbar-1 button {
+    padding: 12px;
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    font-size: 23px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 250ms;
+  }
+
+  .searchbar-1 button:hover {
+    background-color: darkred;
+  }
+
+  .background-color {
+    background-color: grey;
+    width: 100%;
+    height: 10px;
+  }
+
+  .first-flexbox {
+    background-color: black;
+    height: 520px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .text1 {
+    color: white;
+    position: relative;
+    top: 116px;
+    left: 113px;
+    height: 158px;
+    width: 488px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .text1 h1 {
+    font-size: 50px;
+    font-weight: bold;
+    top: 0px;
+    left: 0px;
+  }
+
+  .text1 p {
+    font-size: 23px;
+    position: relative;
+    top: 20px;
+    left: 0px;
+  }
+
+  .feature__image__container {
+    position: relative;
+    top: 72px;
+    left: 175px;
+    bottom: 44px;
+    width: 350px;
+    height: 300px;
+  }
+
+  .feature__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .feature__backgroud__video__container {
+    position: relative;
+    top: -242px;
+    left: 31px;
+    right: 55px;
+    bottom: -57px;
+    width: 82%;
+    height: 54%;
+    overflow: hidden;
+  }
+
+  .border2 {
+    background-color: grey;
+    /* background-color: grey; */
+    width: 100%;
+    height: 7px;
+  }
+
+  .flexbox2 {
+    background-color: black;
+    height: 520px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+    /* Center content vertically */
+  }
+
+  .backimag2 {
+    display: flex;
+    justify-content: center;
+    /* Center the image horizontally */
+    align-items: center;
+    /* Center the image vertically */
+    width: 50%;
+    /* Adjust width as needed */
+  }
+
+  .backimag2 img {
+    height: 341px;
+    width: auto;
+    /* Maintain aspect ratio */
+    margin-left: 20px;
+  }
+
+  .headandpara2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center text vertically */
+    color: white;
+    /* Ensure text color contrasts well with the background */
+    padding: 20px;
+    /* Add padding for spacing */
+    width: 40%;
+    /* Adjust width as needed */
+    /* border: 2px solid blue; */
+
+  }
+
+  .headandpara2 h1 {
+    font-size: 43px;
+    font-weight: bolder;
+  }
+
+  .headandpara2 p {
+    font-size: 20px;
+    position: relative;
+    left: 0px;
+    top: 20px;
+  }
+
+  .border3 {
+    background-color: grey;
+    /* background-color: grey; */
+    width: 100%;
+    height: 7px;
+  }
+
+  .flexbox3 {
+    background-color: black;
+    height: 520px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+    /* Center content vertically */
+  }
+
+  .onlytextbox {
+    color: white;
+    /* border: 2px solid blue; */
+    height: 300px;
+    width: 426px;
+    justify-content: center;
+    margin-left: 208px;
+  }
+
+  .onlytextbox h1 {
+    font-size: 53px;
+  }
+
+  .onlytextbox p {
+    font-size: 21px;
+    position: relative;
+    top: 25px;
+  }
+
+  .border4 {
+    background-color: grey;
+    /* background-color: grey; */
+    width: 100%;
+    height: 7px;
+  }
+
+  .flexbox4 {
+    background-color: black;
+    height: 520px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+    /* Center content vertically */
+  }
+
+
+  .imag4 img {
+    height: 327px;
+    margin-left: 142px;
+    width: 430px;
+  }
+
+  .text4 {
+    /* border: 2px solid blue; */
+    height: 208px;
+    width: 441px;
+    color: white;
+    margin-left: 59px
+  }
+
+  .text4 h1 {
+    font-size: 44px;
+    font-weight: bolder;
+  }
+
+  .text4 p {
+    font-size: 22px;
+    position: relative;
+    top: 20px;
+  }
+
+  .border5 {
+    background-color: grey;
+    /* background-color: grey; */
+    width: 100%;
+    height: 7px;
+  }
+
+
+
+  .question {
+    background-color: black;
+    height: 950px;
+    width: 100%;
+    overflow: hidden;
+    /* padding: 34px; */
+
+  }
+
+  .question h1 {
+    color: white;
+    text-align: center;
+    font-size: 58px;
+    margin-top: 20px;
+    /* font-family: bolder; */
+    font-weight: bolder;
+  }
+
+  .faqbox {
+    display: flex;
+    background-color: rgb(53, 50, 50);
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 27px;
+    font-size: 20px;
+    max-width: 52vw;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .faqbox:hover{
+    color: white;
+    background-color: gray;
+  }
+  .para7 p{
+    text-align: center;
+  font-size: 21px;
+  color: white;
+  margin-top: 36px;
+  }
+
+ 
+
+  .fullinput-button {
+    margin-top: 20px;
+  border: 2px solid black;
+  height: 55px;
+  width: 100vw; /* Full viewport width */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 0; /* Remove default margins */
+}
+
+.input4 input {
+border: 2px solid red;
+  padding: 12px 28px;
+  margin: 8px;
+  font-size: 18px;
+  color: white;
+  /* background-color: rgb(38, 33, 33); */
+  border: none;
+  border-radius: 4px;
+}
+
+.endbutton button {
+padding: 11px 18px;
+  margin: 10px;
+  font-size: 17px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.endbutton button:hover {
+  background-color: rgb(237, 10, 10); /* Optional: button hover color */
+  padding: 12px 19px;
+  margin: 11px;
+  font-size: 18px;
+}
+
+.last-step {
+          position: relative;
+          width: 100vw; /* Full viewport width */
+          height: 520px; /* Fixed height */
+          background-color: black;
+          display: flex;
+          justify-content: center; /* Center horizontally */
+          align-items: center; /* Center vertically */
+      }
+
+      footer {
+          position: absolute; /* Position relative to .last-step */
+          top: 0; /* Align at the top of the container */
+          left: 0; /* Align at the left of the container */
+          right: 0; /* Align at the right of the container */
+          bottom: 0; /* Align at the bottom of the container */
+          background-color: black;
+          color: gray;
+          display: flex;
+          flex-direction: column; /* Arrange items vertically */
+          align-items: center; /* Center items horizontally */
+          justify-content: center; /* Center items vertically */
+          padding: 20px;
+          box-sizing: border-box; /* Include padding in the width and height */
+          overflow: auto; /* Handle overflow if necessary */
+          position: relative;
+      }
+
+      .footer-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 14px; /* Small gap between items */
+          text-align: center;
+          max-width: 1200px; /* Optional: Limit max width */
+          width: 100%; /* Full width of the container */
+          position: relative;
+      }
+
+      .footer-item {
+          font-size: 15px; /* Font size */
+          padding: 1px; /* Reduced padding for closer items */
+      }
+
+      .footer-item a {
+          color: gray;
+          text-decoration: none;
+          display: block;
+          padding: 14px; /* Reduced padding around links */
+      }
+
+      .footer-item a:hover {
+          text-decoration: underline;
+      }
+
+      .button9 {
+          grid-column: span 4; /* Span across all columns */
+          text-align: center;
+          margin-top: 10px; /* Space above the button */
+      }
+
+      .button9 button {
+          background-color: red;
+          color: white;
+          border: none;
+          padding: 8px 20px;
+          cursor: pointer;
+          font-size: 15px;
+          border-radius: 10px;
+      }
+
+      .button9 button:hover {
+          background-color: red;
+          padding: 9px 21px;
+      }
+
+      .footer-bottom-text {
+          position: absolute; /* Absolute positioning for the bottom text */
+          left: 20px; /* Align to the left side */
+          bottom: 20px; /* Align to the bottom */
+          color: gray;
+          font-size: 15px;
+      }
